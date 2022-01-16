@@ -54,6 +54,6 @@ main
                     |   m_exp0.npy
                     |   m.npy
                     |   chi.npy
-                    |    binder.npy
+                    |   binder.npy
 
 ```
