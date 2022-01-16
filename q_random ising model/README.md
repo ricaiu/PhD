@@ -30,3 +30,30 @@ The value of b is the extraction of the critical temperature Tc and it is saved 
 - scaling_plot.py\
 It takes the critical exponents and plot the Magnetization, Susceptivity adn Binder's cumulant with the expected scaling.
 
+
+Data\
+The data are collected in this way. First the directory "glauber" or "metropolis" indicates the sampling mode. Then "1D" or "2D" (not yet implemented) is the spatial dimension.
+Then there is the indication of the sigma value. Now the name of the folder indicates:\
+if scaling_temper is activated the name is "'q'+str(q)+'scale_temp_Tc'+str(Tc)+'_min'+str(lower_t)+'_max'+str(upper_t)+'_nT'+str(num_T)"\
+if not then the name is "'q'+str(q)+'_Tmin'+str(T_min)+'_Tmax'+str(T_max)+'_nT'+str(num_T)".\
+Here we saveTc and critical exponents.\
+Finally we have the last folders named "L_str(L)", in which there are the data (magnetization, chi and binder)\
+In the file "variable.py" it is explained with more detail.\
+```
+
+main
+│   README.md
+└───glauber
+    └───1D
+        └───sigma0.75
+            └───q3scale_temp_Tc2_min-2_max2_nT30
+                │   Tc.npy
+                │   nu.npy
+                |   2_min_eta.npy
+                └───L_256
+                    |   m_exp0.npy
+                    |   m.npy
+                    |   chi.npy
+                    |    binder.npy
+
+```
