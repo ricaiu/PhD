@@ -4,7 +4,7 @@ Dynamical Levy Lattice
 ---
 1) Choose a random spin $S_i$  
 2) Draw $q$ neighbours $S_{r_j}$, each at distance $r_j$ from $S_i$, using as probability distribution $P(r)\sim r^{-(d+\sigma)}$  
-3) Calculate the energy difference $\Delta E = 2\cdot J \cdot S_i \sum_{j=1}^q  S_{r_j}$  
+3) Calculate the energy difference $\Delta E = 2\cdot J \cdot S_i \sum_{j}  S_{r_j}$  
 4) Flip $S_i$ following the wanted prescription (Glauber or Metropolis)  
 
 --- 
