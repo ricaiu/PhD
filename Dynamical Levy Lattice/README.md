@@ -15,12 +15,12 @@ The repository is organized as follow:\
 --> functions.py\
   Here you find all the functions that will be used in the main program.\
 --> parameters.py\
-   Here you can personalize the simulation with the wanted parameter (as temperature, dimension, sizes,...) and choose which prescription for the dynamics you want.\
+   Here you can personalize the simulation with the wanted parameters (as temperature, dimension, sizes,...) and choose which prescription for the dynamics you want.\
 --> main.py\
    This is the main program, the only one you have to run, after changing the parameters.\
 --> main.ipynb\
    This is a Colab Notebook where all three programs mentioned before are present. Here you can see all the algorithm details in a more readability way.\
    \
  Please, feel free to use this code for you research or curiosity! \
- Contact me for more details or if you find some bugs...\
+ Contact me for more details or if you find some bugs!\
  If you will use this for Academic purposes I will appreciate a tiny and simple citation :)
