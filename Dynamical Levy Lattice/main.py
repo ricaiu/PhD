@@ -49,46 +49,9 @@ print(energy)
 
 """Choosing the right requested dynamics"""
 
-if Parameters['Prescription'] == 'metropolis':
-  if Parameters['Boundary Condition'] == 'PBC':
-    if Parameters['Dimension'] == 1:
-      dynamics = q_metropolis_1D
-    elif Parameters['Dimension'] == 2:
-      dynamics = q_metropolis_2D
-  elif Parameters['Boundary Condition'] == 'infinite PBC':
-    if Parameters['Dimension'] == 1:
-      dynamics = q_metropolis_infinite_1D
-    elif Parameters['Dimension'] == 2:
-      dynamics = q_metropolis_infinite_2D
-  elif Parameters['Boundary Condition'] == 'positiveBC':
-    if Parameters['Dimension'] == 1:
-      dynamics = q_metropolis_positiveBC_1D
-    elif Parameters['Dimension'] == 2:
-      dynamics = q_metropolis_positiveBC_2D
-  else:
-    print('Erros: not existing boundary condition!')
-elif Parameters['Prescription'] == 'glauber':
-  if Parameters['Boundary Condition'] == 'PBC':
-    if Parameters['Dimension'] == 1:
-      dynamics = q_glauber_1D
-    elif Parameters['Dimension'] == 2:
-      dynamics = q_glauber_2D
-  elif Parameters['Boundary Condition'] == 'infinite PBC':
-    if Parameters['Dimension'] == 1:
-      dynamics = q_glauber_infinite_1D
-    elif Parameters['Dimension'] == 2:
-      dynamics = q_glauber_infinite_2D
-  elif Parameters['Boundary Condition'] == 'positiveBC':
-    if Parameters['Dimension'] == 1:
-      dynamics = q_glauber_positiveBC_1D
-    elif Parameters['Dimension'] == 2:
-      dynamics = q_glauber_positiveBC_2D
-  else:
-    print('Erros: not existing boundary condition!')
+dynamics = choose_dynamics(Parameters)
 
-else:
-  print('Error: not existing dynamics!')
-print('Chosen dynamics: ', dynamics)
+"""Start Simulation!"""
 
 for L in Parameters['Sizes']:
 
@@ -176,10 +139,3 @@ for L in Parameters['Sizes']:
   if Parameters['Start'] == 'hot':
     magnetization = magnetization[::-1]
   np.save(saving_directory+'/magnetization.npy',magnetization)
-
-
-
-
-
-
-
