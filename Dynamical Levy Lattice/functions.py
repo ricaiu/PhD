@@ -415,8 +415,6 @@ def make_Temperature_file(Ls,path,Ts,steps):
   Create a file "path/Ts.npy" which stores the temperatures
   and a file "path/Ts.txt" which could be useful for future simulations.
   '''
-
-
   temper = np.empty((len(Ls),len(Ts[Ls[0]])))
   L_idx = 0
   for L1 in Ls:
@@ -431,3 +429,49 @@ def make_Temperature_file(Ls,path,Ts,steps):
           print(L1,': np.linspace(',temper[L_idx][0],', ',temper[L_idx][-1],',num_T),',file = f)
           L_idx+=1
       print('}',file = f)
+    
+def choose_dynamics(Parameters):
+    '''
+    Choose the requested dynamics
+    '''
+  if Parameters['Prescription'] == 'metropolis':
+    if Parameters['Boundary Condition'] == 'PBC':
+      if Parameters['Dimension'] == 1:
+        dynamics = q_metropolis_1D
+      elif Parameters['Dimension'] == 2:
+        dynamics = q_metropolis_2D
+    elif Parameters['Boundary Condition'] == 'infinite PBC':
+      if Parameters['Dimension'] == 1:
+        dynamics = q_metropolis_infinite_1D
+      elif Parameters['Dimension'] == 2:
+        dynamics = q_metropolis_infinite_2D
+    elif Parameters['Boundary Condition'] == 'positiveBC':
+      if Parameters['Dimension'] == 1:
+        dynamics = q_metropolis_positiveBC_1D
+      elif Parameters['Dimension'] == 2:
+        dynamics = q_metropolis_positiveBC_2D
+    else:
+      print('Erros: not existing boundary condition!')
+  elif Parameters['Prescription'] == 'glauber':
+    if Parameters['Boundary Condition'] == 'PBC':
+      if Parameters['Dimension'] == 1:
+        dynamics = q_glauber_1D
+      elif Parameters['Dimension'] == 2:
+        dynamics = q_glauber_2D
+    elif Parameters['Boundary Condition'] == 'infinite PBC':
+      if Parameters['Dimension'] == 1:
+        dynamics = q_glauber_infinite_1D
+      elif Parameters['Dimension'] == 2:
+        dynamics = q_glauber_infinite_2D
+    elif Parameters['Boundary Condition'] == 'positiveBC':
+      if Parameters['Dimension'] == 1:
+        dynamics = q_glauber_positiveBC_1D
+      elif Parameters['Dimension'] == 2:
+        dynamics = q_glauber_positiveBC_2D
+    else:
+      print('Erros: not existing boundary condition!')
+
+  else:
+    print('Error: not existing dynamics!')
+  print('Chosen dynamics: ', dynamics)
+  return dynamics
