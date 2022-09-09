@@ -1,11 +1,12 @@
 #For each size choose the temperature range and save it in this dictionary:
-Ts  = {8 : np.linspace(1,2,10)}
+Ts  = {8 : np.linspace(1,2,10),
+       16: np.linspace(1.2,1.8,10)}
 
 
 Parameters = {
-    'Prescription' : 'metropolis', #'metropolis' 'glauber'
-    'Boundary Condition' : 'PBC', #'PBC', 'infinite_PBC', 'positiveBC
-    'Start' : 'hot',
+    'Prescription' : 'metropolis', #The actual possibilities are: 'metropolis' 'glauber'
+    'Boundary Condition' : 'PBC', #The actual possibilities are: 'PBC', 'infinite PBC', 'positiveBC'
+    'Start' : 'hot', #The actual possibilities are: 'hot', 'cold'
     'Dimension' : 1,
     'Sigma' : 1,
     'Neighbours' : 4,
@@ -13,8 +14,8 @@ Parameters = {
     'Temperatures' : Ts ,
     'Autocorrelation' : 100,
     'Steps' : 100,
-    'Path' : '',
-    'File Name' : '',
-    'Output file name' :  'test'
+    'Path' : 'saving_path/',
+    'File Name' : 'filename',
+    'Output file name' :  'output_filename'
 
 }
