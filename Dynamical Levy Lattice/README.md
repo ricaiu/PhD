@@ -22,4 +22,4 @@ The repository is organized as follow:\
    This is a Colab Notebook where all three programs mentioned before are present. Here you can see all the algorithm details in a more readability way.\
    \
  Please, feel free to use this code for you research or curiosity! \
- Contact me for more details or if you find some bugs!\
+ Contact me for more details or if you find some bugs!
