@@ -23,4 +23,3 @@ The repository is organized as follow:\
    \
  Please, feel free to use this code for you research or curiosity! \
  Contact me for more details or if you find some bugs!\
- If you will use this for Academic purposes I will appreciate a tiny and simple citation :)
