@@ -20,6 +20,8 @@ The repository is organized as follow:\
    This is the main program, the only one you have to run, after changing the parameters.\
 --> main.ipynb\
    This is a Colab Notebook where all three programs mentioned before are present. Here you can see all the algorithm details in a more readability way.\
+--> C++\
+   In this folder you can find the same algorithm but in C++, both fo 1D and 2D case. Here I implemented also a version with OMP, which allows you to run the code in parallel CPUs, in order to speed up simulations. On our machines, the C++ code seems faster than the Python one by a O(50), so I recommend you to use it! (But the Python code is more readable!) In this folder there is also a pseudorandom number generator the SFMT.\
    \
  Please, feel free to use this code for you research or curiosity! \
  Contact me for more details or if you find some bugs!
