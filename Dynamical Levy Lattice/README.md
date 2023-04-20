@@ -1,16 +1,8 @@
 ---
 Dynamical Levy Lattice
 ---
-Here you can find all the codes used for generating the data for our paper "Critical dynamics of long range models on Dynamical Lévy Lattices", currently submitted on PRB (APS). You can find a preprint version here: https://arxiv.org/abs/2303.18057.
----
-1) Choose a random spin $S_i$  
-2) Draw $q$ neighbours $S_{r_j}$, each at distance $r_j$ from $S_i$, using as probability distribution $P(r)\sim r^{-(d+\sigma)}$  
-3) Calculate the energy difference $\Delta E = 2\cdot J \cdot S_i \sum_{j}  S_{r_j}$  
-4) Flip $S_i$ following the wanted prescription (Glauber or Metropolis)  
 
---- 
-
-In this repository you can find the code used for creating the data, which were used  in the paper ( Paper is not finished yet).\
+In this repository you can find the code used for creating the data, which were used in the paper "Critical dynamics of long range models on Dynamical Lévy Lattices", currently submitted on PRB (APS). You can find a preprint version here: https://arxiv.org/abs/2303.18057..\
 In a nutshell we provide an algorithm which is able to generate configurations of a Long Range Ising Model, where the interaction decays with the distance following a power-law $r^{-(d+\sigma)}$. \
 The repository is organized as follow:\
 --> functions.py\
