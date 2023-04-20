@@ -1,6 +1,7 @@
 ---
 Dynamical Levy Lattice
 ---
+Here you can find all the codes used for generating the data for our paper "Critical dynamics of long range models on Dynamical Lévy Lattices", currently submitted on PRB (APS). You can find a preprint version here: https://arxiv.org/abs/2303.18057.
 ---
 1) Choose a random spin $S_i$  
 2) Draw $q$ neighbours $S_{r_j}$, each at distance $r_j$ from $S_i$, using as probability distribution $P(r)\sim r^{-(d+\sigma)}$  
