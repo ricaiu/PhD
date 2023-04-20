@@ -2,7 +2,7 @@
 Dynamical Levy Lattice
 ---
 
-In this repository you can find the code used for creating the data, which were used in the paper "Critical dynamics of long range models on Dynamical Lévy Lattices", currently submitted on PRB (APS). You can find a preprint version here: https://arxiv.org/abs/2303.18057..\
+In this repository you can find the code used for creating the data, which were used in the paper "Critical dynamics of long range models on Dynamical Lévy Lattices", currently submitted on PRB (APS). You can find a preprint version here: https://arxiv.org/abs/2303.18057. .\
 In a nutshell we provide an algorithm which is able to generate configurations of a Long Range Ising Model, where the interaction decays with the distance following a power-law $r^{-(d+\sigma)}$. \
 The repository is organized as follow:\
 --> functions.py\
